@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    margin-left: 200px;
+    /* Same as the sidebar width */
+    padding: 20px;
+    flex: 1;
+    background-color: #f4f4f4;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto 1fr; */
+    gap: 20px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid;
+    height: 325px;
+}
+
+.donut-graph {
+    height: 340px;
+  width: 425px;
+}
+
+.donut-graph canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart {
+    display: flex;
+    box-sizing: border-box;
+    height: 340px;
+    width: 610px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    /* Adjust the second value to set the desired gap between rows */
+}
+
+table tr {
+    background-color: #f8f9fa;
+    /* Optional: Add background color to alternate rows */
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.table-wrapper {
+    max-height: 300px;
+    /* Adjust the maximum height as needed */
+    overflow-y: auto;
+}
+
+.table-wrapper table {
+    width: 100%;
+    /* Set the width to 100% */
+}
+
+.container7,
+.container8 {
+    display: inline-block;
+}
+
+.container1,
+.container2,
+.container3 {
+    display: inline-grid;
+    width: 33%;
+    margin-bottom: 10px;
+}
+
+.container4 {
+    display: inline-block;
+    margin-right: 4px;
+    width: 690px
+}
+
+.container5 {
+    display: inline-flex;
+    position: absolute;
+    width: 345px;
+}
+
+.container4,
+.container5 {
+    margin-bottom: 10px;
+
+}

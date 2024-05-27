@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Complaint Desk</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#">States</a></li>
+            <li><a href="#">Download Data</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>E-Complaint Desk</h1>
+        </header>
+        <div class="container">
+            <div class="box complaint-solved container1">Complaint Solved</div>
+            <div class="box complaint-raised container2">
+                <a href="ComplaintRaised.html">Complaint Raised</a>
+            </div>
+            <div class="box complaint-pending container3">Complaint Pending</div>
+            <div class="box table container4">
+                <div class="table-wrapper"><h3>Complaint</h3>
+                    <table>
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2024-05-27</td>
+                            <td>10:00 AM</td>
+                            <td>Location 1</td>
+                            <td>Description 1</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2024-05-27</td>
+                            <td>11:00 AM</td>
+                            <td>Location 2</td>
+                            <td>Description 2</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2024-05-27</td>
+                            <td>12:00 PM</td>
+                            <td>Location 3</td>
+                            <td>Description 3</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2024-05-27</td>
+                            <td>01:00 PM</td>
+                            <td>Location 4</td>
+                            <td>Description 4</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2024-05-27</td>
+                            <td>01:00 PM</td>
+                            <td>Location 5</td>
+                            <td>Description 5</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 6</td>
+                            <td>Description 6</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 7</td>
+                            <td>Description 7</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 8</td>
+                            <td>Description 8</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 9</td>
+                            <td>Description 9</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 10</td>
+                            <td>Description 10</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 11</td>
+                            <td>Description 11</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 12</td>
+                            <td>Description 12</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 13</td>
+                            <td>Description 13</td>
+    
+    
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>2024-05-27</td>
+                            <td>02:00 PM</td>
+                            <td>Location 14</td>
+                            <td>Description 14</td>
+    
+    
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box similar-questions container5">Similar Questions</div>
+            <div class="box memory container6">20TB Memory</div>
+            <div class="box mostly-complain-type container9">Mostly Complain TYPE</div>
+            <div class="box chart container7">
+                <canvas id="myLineChart"></canvas>
+            </div>
+            <div class="box donut-graph container8">
+                <canvas id="myDonutChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Donut Chart
+        const ctxDonut = document.getElementById('myDonutChart').getContext('2d');
+        const myDonutChart = new Chart(ctxDonut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Solved', 'Raised', 'Pending'],
+                datasets: [{
+                    label: 'Complaints',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Complaint Status Distribution'
+                    }
+                }
+            },
+        });
+
+        // Line Chart
+        const ctxLine = document.getElementById('myLineChart').getContext('2d');
+        const myLineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Complaints Over Time',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Complaints'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Complaint Trends Over Months'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
