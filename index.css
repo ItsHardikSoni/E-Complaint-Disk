@@ -8,7 +8,7 @@ body {
 .sidebar {
     width: 200px;
     height: 100vh;
-    background-color: #333;
+    background-color: #3d52a1;
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -44,10 +44,10 @@ body {
 .main-content {
     margin-left: 200px;
     /* Same as the sidebar width */
-    padding: 20px;
+    padding: 15px;
     flex: 1;
-    background-color: #f4f4f4;
-    height: 100vh;
+    background-color: #7191e6;
+    height: 1455px;
     box-sizing: border-box;
 }
 
@@ -64,7 +64,7 @@ header {
 }
 
 .box {
-    background-color: #fff;
+    background-color: #eee8f6;
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -72,13 +72,13 @@ header {
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
-    border: 2px solid;
+    border: 2px solid #3d52a1;
     height: 325px;
 }
 
 .donut-graph {
     height: 340px;
-  width: 425px;
+  width: 408px;
 }
 
 .donut-graph canvas {
@@ -90,13 +90,14 @@ header {
     display: flex;
     box-sizing: border-box;
     height: 340px;
-    width: 610px;
+    width: 637px;
 }
 
 table {
     border-collapse: separate;
-    border-spacing: 0 10px;
+    border-spacing: 0 2px;
     /* Adjust the second value to set the desired gap between rows */
+    background-color: #adbada;
 }
 
 table tr {
@@ -108,11 +109,12 @@ th,
 td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+    background-color: #eee8f6;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #3d52a147;
 }
 
 .table-wrapper {
@@ -126,10 +128,6 @@ th {
     /* Set the width to 100% */
 }
 
-.container7,
-.container8 {
-    display: inline-block;
-}
 
 .container1,
 .container2,
@@ -142,7 +140,7 @@ th {
 .container4 {
     display: inline-block;
     margin-right: 4px;
-    width: 690px
+    width: 698px;
 }
 
 .container5 {
@@ -154,5 +152,17 @@ th {
 .container4,
 .container5 {
     margin-bottom: 10px;
+    
+}
 
+.container7,
+.container8 {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.container9,.container6{
+    /* margin-bottom: 10px; */
+    display: inline-block;
+  width: 522px;
 }
