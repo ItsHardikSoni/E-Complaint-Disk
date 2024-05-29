@@ -90,7 +90,7 @@ header {
     display: flex;
     box-sizing: border-box;
     height: 340px;
-    width: 637px;
+    width: 620px;
 }
 
 table {
@@ -164,5 +164,5 @@ th {
 .container9,.container6{
     /* margin-bottom: 10px; */
     display: inline-block;
-  width: 522px;
+  width: 514px;
 }
